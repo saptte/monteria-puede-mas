@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: mpm
+      POSTGRES_PASSWORD: mpm
+      POSTGRES_DB: mpm
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./sql/init:/docker-entrypoint-initdb.d
+      - mpm_pg:/var/lib/postgresql/data
+
+volumes:
+  mpm_pg:

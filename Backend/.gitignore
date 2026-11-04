@@ -1,0 +1,29 @@
+node_modules
+dist
+.env
+*.log
+.DS_Store
+
+
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Variables privadas
+.env
+.env.*
+!.env.example
+
+# Archivos de compilación
+dist/
+build/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Sistema
+.DS_Store
+Thumbs.db
